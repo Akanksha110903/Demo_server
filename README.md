@@ -352,5 +352,4 @@ project/
 └── README.md          # Documentation
 ```
 
-```
 
