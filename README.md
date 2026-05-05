@@ -236,7 +236,7 @@ python server.py \
   --key /etc/ssl/private/server.key
 ```
 
-## if the arguments are correct the server will start
+if the arguments are correct the server will start
 ---
 
 ##  Access the Server
@@ -253,7 +253,7 @@ Example:
 https://192.168.1.10:5000
 ```
 
-## A login page will appear
+A login page will appear
 
 ---
 
