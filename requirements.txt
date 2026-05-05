@@ -1,0 +1,7 @@
+#1)python packages required:
+
+Flask==3.0.3
+
+#2)SSL Certificate Requirement: This server requires a valid SSL certificate and private key to start. It will Not start without them
+#Required files:  1)A certificate file (.crt)
+                  2)A private key file(.key)
