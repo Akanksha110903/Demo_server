@@ -1,6 +1,4 @@
-Here’s the **full README.md content** in one clean block — you can copy-paste directly:
 
-```markdown
 #  Secure Flask HTTPS Login Server
 
 A lightweight Flask-based HTTPS server that **enforces SSL/TLS**, accepts certificate and key via **command-line arguments**, and provides a clean login UI for testing authentication and certificate workflows.
