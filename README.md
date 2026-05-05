@@ -235,7 +235,6 @@ python server.py \
   --cert /etc/ssl/certs/server.crt \
   --key /etc/ssl/private/server.key
 ```
-
 if the arguments are correct the server will start
 ---
 
