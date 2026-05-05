@@ -184,7 +184,7 @@ openssl req -x509 -nodes -days 365 \
 
 ---
 
-###  Output Files : following files will get generated in the directory
+ Output Files : following files will get generated in the directory
 
 ```
 server.key   → Private Key
