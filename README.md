@@ -212,7 +212,7 @@ This confirms SAN is correctly added.
 
 #  5. Usage
 
-## Basic Command : Enter the following command to start the server
+Basic Command : Enter the following command to start the server
 
 ```bash
 python server.py --cert <certificate.crt> --key <private.key>
@@ -220,7 +220,7 @@ python server.py --cert <certificate.crt> --key <private.key>
 
 ---
 
-## Example (Local Files): if the certificate and key are present in local directory you can directly use it
+ Example (Local Files): if the certificate and key are present in local directory you can directly use it
 
 ```bash
 python server.py --cert server.crt --key server.key
@@ -228,7 +228,7 @@ python server.py --cert server.crt --key server.key
 
 ---
 
-## Example (Absolute Paths — Recommended): if the certificate and key are located in other directly use absolute path as follows
+ Example (Absolute Paths — Recommended): if the certificate and key are located in other directly use absolute path as follows
 
 ```bash
 python server.py \
@@ -239,7 +239,7 @@ python server.py \
 if the arguments are correct the server will start
 ---
 
-##  Access the Server
+  Access the Server
 
 Open browser: Enter the server IP and port
 
