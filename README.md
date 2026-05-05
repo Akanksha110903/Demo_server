@@ -155,7 +155,7 @@ IP.2 = 192.168.1.10
 
 ###  Important
 
-Replace:
+Replace from openssl.cnf file:
 
 ```
 IP.2 = 192.168.1.10
