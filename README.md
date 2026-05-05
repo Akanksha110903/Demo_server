@@ -193,7 +193,7 @@ server.crt   → Certificate
 
 ---
 
-###  3.5 Verify Certificate : to check the content of certificate of verity wether the IP is added run the following command
+###  3.5 Verify Certificate : to check the content of certificate or verity wether the IP is added run the following command
 
 ```bash
 openssl x509 -in server.crt -text -noout
@@ -236,7 +236,7 @@ python server.py \
   --key /etc/ssl/private/server.key
 ```
 
-## if the arguments are correct the server will get started
+## if the arguments are correct the server will start
 ---
 
 ##  Access the Server
@@ -252,6 +252,8 @@ Example:
 ```
 https://192.168.1.10:5000
 ```
+
+## A login page will appear
 
 ---
 
