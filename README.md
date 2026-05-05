@@ -120,13 +120,13 @@ All certificate files will be generated here.
 
 ###  3.3 Create OpenSSL Configuration File (SAN Enabled)
 
-Create config file:
+Create config file with any name and .cnf extension:
 
 ```bash
 nano openssl.cnf
 ```
 
-Paste the following:
+Paste the following content in the file:
 
 ```
 [req]
