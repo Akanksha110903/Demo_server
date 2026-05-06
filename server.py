@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string, send_file
 import argparse
 import os
 import sys
@@ -82,11 +82,18 @@ HTML = """
 
 <div class="login-card">
     <h2> Login</h2>
+
     <form method="POST">
         <input name="username" placeholder="Username" required>
         <input name="password" type="password" placeholder="Password" required>
         <button type="submit">Login</button>
     </form>
+
+    <br>
+
+    <a href="/download-cert">
+        <button type="button">Download SSL Certificate</button>
+    </a>
 
     {% if message %}
         <div class="message {{ 'success' if 'successful' in message else 'error' }}">
@@ -112,6 +119,13 @@ def login():
             message = "Invalid credentials ?"
 
     return render_template_string(HTML, message=message)
+    
+@app.route("/download-cert")
+def download_cert():
+    return send_file(
+        CERT_FILE,
+        as_attachment=True
+    )
 
 def validate_ssl_files(cert, key):
     # Check presence
@@ -156,6 +170,10 @@ if __name__ == "__main__":
 
     # ?? Enforce SSL (no fallback allowed)
     validate_ssl_files(args.cert, args.key)
+    
+    # Store certificate path globally
+    global CERT_FILE
+    CERT_FILE = args.cert
 
     try:
         app.run(
