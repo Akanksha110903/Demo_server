@@ -255,6 +255,67 @@ https://192.168.1.10:5000
 ```
 
 A login page will appear
+Also download SSL certificate button will appear below login, download the certificate and add into trusted certificate directory to avoid SSL certificate issue.
+
+Steps to Add the certificate in the Trusted Certificate directory
+
+1)For Linux:
+Prerequisits:
+Install NSS tools using following command: 
+```
+sudo apt install libnss3-tools
+```
+verify certutil is Installed
+```
+certutil -H
+```
+check whether NSSDB exists using following command:
+```
+ls ~/.pki/nssdb
+```
+create NSSDB if not present using following commands:
+```
+mkdir -p ~/.pki/nssdb
+certutil -N -d sql:$HOME/.pki/nssdb
+```
+You will be asked to set a password
+
+You can press Enter for no password during testing.
+
+after creation verify database files:
+```
+ls ~/.pki/nssdb
+```
+You should see:
+```
+cert9.db
+key4.db
+pkcs11.txt
+```
+Add certificate into NSSDB using following command: 
+```
+certutil -A \
+-d sql:$HOME/.pki/nssdb \
+-n "Demo Server" \
+-t "C,," \
+-i server.crt
+```
+Verify certificate added successfully using
+```
+certutil -L -d sql:$HOME/.pki/nssdb
+```
+example output:
+```
+Certificate Nickname                                         Trust Attributes
+                                                             SSL,S/MIME,JAR/XPI
+
+Demo Server                                                  C,,
+```
+
+2)For windows :
+Download the certificate and install into Trusted Root Certificate Authority directory
+
+After adding the certificate in Trusted Root Certificate Authority directory the SSL certificate issue will not appear
 
 ---
 
